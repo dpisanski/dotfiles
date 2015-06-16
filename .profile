@@ -15,4 +15,5 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-export EDITOR=nano
+export VISUAL=vim
+export EDITOR="$VISUAL"
