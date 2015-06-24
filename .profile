@@ -17,3 +17,5 @@ fi
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
+complete -C '/usr/local/bin/aws_completer' aws
+export PATH=/usr/local/bin/aws_completer:$PATH
