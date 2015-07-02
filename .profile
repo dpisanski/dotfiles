@@ -11,8 +11,8 @@
 # ~/.profile has the stuff NOT specifically related to bash, such as environment variables (PATH and friends)
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/local/bin" ] ; then
-    PATH="$HOME/local/bin:$PATH"
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
 fi
 
 if [ -a "/usr/local/bin/aws_completer" ] ; then
