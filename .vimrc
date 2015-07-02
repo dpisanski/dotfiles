@@ -25,6 +25,9 @@ filetype plugin indent on
 " Enable syntax highlighting
 syntax on
 
+" older versions of git have trouble with https
+let g:vundle_default_git_proto = 'git'
+
 " Vim with default settings does not allow easy switching between multiple files
 " in the same editor window. Users can use multiple split windows or multiple
 " tab pages to edit multiple files, but it is still best to enable an option to
