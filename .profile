@@ -11,11 +11,13 @@
 # ~/.profile has the stuff NOT specifically related to bash, such as environment variables (PATH and friends)
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
+if [ -d "$HOME/local/bin" ] ; then
+    PATH="$HOME/local/bin:$PATH"
+fi
+
+if [ -a "/usr/local/bin/aws_completer" ] ; then
+    complete -C '/usr/local/bin/aws_completer' aws
 fi
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
-complete -C '/usr/local/bin/aws_completer' aws
-export PATH=/usr/local/bin/aws_completer:$PATH
