@@ -1,14 +1,13 @@
 #!/usr/bin/env bash
 
-# source: https://github.com/mathiasbynens/dotfiles/blob/master/bootstrap.sh 
+source: https://github.com/mathiasbynens/dotfiles/blob/master/bootstrap.sh 
 
 cd "$(dirname "${BASH_SOURCE}")";
 
-git pull origin master;
+# git pull origin master;
 
 function doIt() {
-	rsync --exclude ".git/" --exclude "bootstrap.sh" \
-		--exclude "README.md" -avh --no-perms . ~;
+	rsync --exclude-from 'rsync_exclude_list.txt' -avh --no-perms . ~;
 	source ~/.bash_profile;
 }
 

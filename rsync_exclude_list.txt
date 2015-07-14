@@ -1,0 +1,5 @@
+rsync_exclude_list.txt
+.git/
+bootstrap.sh
+setup.sh
+README.md
