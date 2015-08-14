@@ -13,6 +13,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'ciaranm/securemodelines'
+Plugin 'kien/ctrlp.vim'
 
 call vundle#end()           
 
