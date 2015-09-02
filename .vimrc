@@ -14,6 +14,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'ciaranm/securemodelines'
 Plugin 'kien/ctrlp.vim'
+Plugin 'derekwyatt/vim-scala'
 
 call vundle#end()           
 
