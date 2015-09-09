@@ -1,3 +1,9 @@
 [user]
 	name = David Pisanski
 	email = dpisanski@gmail.com
+[diff]
+	renames = true
+[http]
+	postBuffer = 524288000
+[color]
+	ui = true
