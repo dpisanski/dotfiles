@@ -51,11 +51,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
-if [ -e "~/.git-completion.bash" ]; then
-  if [ -e "~/.git-prompt.sh" ]; then
+if [ -e "$HOME/.git-completion.bash" ]; then
+    if [ -e "$HOME/.git-prompt.sh" ]; then
     # Both of these files are required.
-    source "~/.git-completion.bash"
-    source "~/.git-prompt.sh"
+    source "$HOME/.git-completion.bash"
+    source "$HOME/.git-prompt.sh"
     export PS1='[\h \[\033[0;36m\]\W\[\033[0m\]$(__git_ps1 " \[\033[1;32m\](%s)\[\033[0m\]")]\$ '
   fi
 else
