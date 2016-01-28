@@ -16,7 +16,21 @@ Plugin 'ciaranm/securemodelines'
 Plugin 'kien/ctrlp.vim'
 Plugin 'derekwyatt/vim-scala'
 
+" Add maktaba and codefmt to the runtimepath.
+" (The latter must be installed before it can be used.)
+Plugin 'google/vim-maktaba'
+Plugin 'google/vim-codefmt'
+" Also add Glaive, which is used to configure codefmt's maktaba flags. See
+" `:help :Glaive` for usage.
+Plugin 'google/vim-glaive'
+
 call vundle#end()           
+
+call glaive#Install()
+" Optional: Enable codefmt's default mappings on the <Leader>= prefix.
+Glaive codefmt plugin[mappings]
+
+Glaive codefmt clang_format_executable='clang-format-3.7'
 
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
@@ -28,7 +42,9 @@ filetype plugin indent on
 syntax on
 
 " older versions of git have trouble with https
-let g:vundle_default_git_proto = 'git'
+" let g:vundle_default_git_proto = 'git'
+
+let g:syntastic_cpp_compiler_options = '-std=c++11'
 
 " Vim with default settings does not allow easy switching between multiple files
 " in the same editor window. Users can use multiple split windows or multiple
@@ -76,6 +92,10 @@ set backspace=indent,eol,start
 " When opening a new line and no filetype-specific indenting is enabled, keep
 " the same indent as the line you're currently on. Useful for READMEs, etc.
 set autoindent
+
+" Set C++ indent options
+set cindent
+set cino=j1,(0,ws,Ws,g0
 
 " Stop certain movements from always going to the first character of a line.
 " While this behaviour deviates from that of Vi, it does what most users
