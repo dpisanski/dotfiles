@@ -61,3 +61,11 @@ if [ -e "$HOME/.git-completion.bash" ]; then
 else
   export PS1='[\h \[\033[0;36m\]\W\[\033[0m\]]\$ '
 fi
+
+# Add local ruby gems to PATH
+if which ruby >/dev/null && which gem >/dev/null; then
+    PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+
+    # Tell Bundler to install gems locally
+    export GEM_HOME=$(ruby -e 'print Gem.user_dir')
+fi
