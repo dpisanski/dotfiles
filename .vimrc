@@ -12,9 +12,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'ciaranm/securemodelines'
 Plugin 'kien/ctrlp.vim'
-Plugin 'derekwyatt/vim-scala'
+Plugin 'scrooloose/nerdtree'
 
 " Add maktaba and codefmt to the runtimepath.
 " (The latter must be installed before it can be used.)
@@ -30,8 +29,6 @@ call glaive#Install()
 " Optional: Enable codefmt's default mappings on the <Leader>= prefix.
 Glaive codefmt plugin[mappings]
 
-Glaive codefmt clang_format_executable='clang-format-3.7'
-
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
 " and for plugins that are filetype specific.
@@ -43,8 +40,6 @@ syntax on
 
 " older versions of git have trouble with https
 " let g:vundle_default_git_proto = 'git'
-
-let g:syntastic_cpp_compiler_options = '-std=c++11'
 
 " Vim with default settings does not allow easy switching between multiple files
 " in the same editor window. Users can use multiple split windows or multiple
