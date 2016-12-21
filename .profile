@@ -15,6 +15,11 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+# add pip local bin to path
+if [[ -d "$HOME/.local/bin" ]]; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
 if [ -a "/usr/local/bin/aws_completer" ] ; then
     complete -C '/usr/local/bin/aws_completer' aws
 fi

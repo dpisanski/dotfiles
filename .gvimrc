@@ -1,6 +1,5 @@
-"remove toolbar
-set guioptions-=T  
+set guioptions-=T "remove toolbar
+set guioptions-=r "remove right-hand scroll bar
+set guioptions-=L "remove left-hand scroll bar. Fix for TagBar.
 
-if has("gui_gtk2")
-    set guifont=DejaVu\ Sans\ Mono\ Book\ 9
-endif
+colorscheme molokai

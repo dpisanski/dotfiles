@@ -14,6 +14,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'derekwyatt/vim-scala'
 
 " Add maktaba and codefmt to the runtimepath.
 " (The latter must be installed before it can be used.)
@@ -28,6 +29,8 @@ call vundle#end()
 call glaive#Install()
 " Optional: Enable codefmt's default mappings on the <Leader>= prefix.
 Glaive codefmt plugin[mappings]
+
+" colorschemes
 
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
@@ -153,3 +156,13 @@ nnoremap <C-L> :nohl<CR><C-L>
 
 " List numbering formatter
 set fo+=n
+
+" NERDTree settings
+" Show hidden files
+let NERDTreeShowHidden=1
+
+" Syntastic settings
+let g:syntastic_python_python_exec = '/usr/bin/python3' 
+let g:syntastic_python_checkers = ['python', 'flake8', 'pylint'] 
+let g:syntastic_python_flake8_args = "--ignore=E501,E402,E265"
+let g:syntastic_python_pylint_args = "--disable=wrong-import-position,missing-docstring"
