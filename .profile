@@ -10,9 +10,6 @@
 
 # ~/.profile has the stuff NOT specifically related to bash, such as environment variables (PATH and friends)
 
-# colored terminal in OSX
-export CLICOLOR=1
-
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
@@ -28,4 +25,11 @@ fi
 
 if [ -a "/usr/local/bin/aws_completer" ] ; then
     complete -C '/usr/local/bin/aws_completer' aws
+fi
+
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    :
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    # colored terminal in OSX
+    export CLICOLOR=1
 fi

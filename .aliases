@@ -27,6 +27,4 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 
-else
-        # Unknown.
 fi
