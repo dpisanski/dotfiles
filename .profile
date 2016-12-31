@@ -33,3 +33,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     # colored terminal in OSX
     export CLICOLOR=1
 fi
+
+if [[ -x "/usr/libexec/java_home" ]]; then
+    export JAVA_HOME="$(/usr/libexec/java_home)"
+fi
