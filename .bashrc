@@ -56,10 +56,10 @@ if [ -e "$HOME/.git-completion.bash" ]; then
     # Both of these files are required.
     source "$HOME/.git-completion.bash"
     source "$HOME/.git-prompt.sh"
-    export PS1='[\h \[\033[0;36m\]\W\[\033[0m\]$(__git_ps1 " \[\033[1;32m\](%s)\[\033[0m\]")]\$ '
+    export PS1='[\u \[\033[0;36m\]\W\[\033[0m\]$(__git_ps1 " \[\033[1;32m\](%s)\[\033[0m\]")]\$ '
   fi
 else
-  export PS1='[\h \[\033[0;36m\]\W\[\033[0m\]]\$ '
+  export PS1='[\u \[\033[0;36m\]\W\[\033[0m\]]\$ '
 fi
 
 # Add local ruby gems to PATH
